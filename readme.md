@@ -17,4 +17,23 @@ we have define this property column in the models of the main serializer
 
 
 
+loading the initial data :
+
+we will load the initial data into the table using the command
+
+we will use the concept of fixtures in django for loading data into the database
+
+
+
+python manage.py loaddata user.json
+
+This command will load the user data into the database 
+
+we can also dump data to json using
+
+
+python manage.py dumpdata --format json --indent 2 > filename(ubuntu)
+
+
+
 
