@@ -13,6 +13,10 @@ function as a property field so that we can add it in the serializer.
 
 we have define this property column in the models of the main serializer
 
+Using this serializer we can create api end points which can fetched from ajax or can be used for single page applications like  
+
+react or angular
+
 
 
 
