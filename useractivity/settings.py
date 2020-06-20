@@ -25,7 +25,7 @@ SECRET_KEY = 'x$@qzpp+x1#tek3u6u$1%q9&nd%l8u(y0)vbkpg^wofdzb7ov$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['useractivity-throttle.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,19 +76,19 @@ WSGI_APPLICATION = 'useractivity.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
+    'default': {
        
-    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-    #     'NAME':'new',
-    #     'USER':'postgres',
-    #     'PASSWORD':'Mohan@1210',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432'
+        'NAME':'new',
+        'USER':'postgres',
+        'PASSWORD':'Mohan@1210',
+        'HOST': 'localhost',
+        'PORT': '5432'
         
 
 
-    # }
+    }
 }
 
 
@@ -130,6 +130,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# import dj_database_url
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 

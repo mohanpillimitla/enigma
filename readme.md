@@ -32,7 +32,7 @@ This command will load the user data into the database
 we can also dump data to json using
 
 
-python manage.py dumpdata --format json --indent 2 > filename(ubuntu)
+python manage.py dumpdata appname.model --format json --indent 2 > filename(ubuntu)
 
 
 
