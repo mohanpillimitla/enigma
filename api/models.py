@@ -9,16 +9,10 @@ class Employees(models.Model):
 	real_name=models.CharField(max_length=20)
 	tz=TimeZoneField(choices=PRETTY_ALL_TIMEZONES_CHOICES)
 
-	@property
-	def activity(self):
-		return self.activities_set.all()
 	
-
-	
-
 
 class Activities(models.Model):
-	employee=models.ForeignKey(Employees,on_delete=models.CASCADE,null=False)
+	employee=models.ForeignKey(Employees,on_delete=models.CASCADE,null=False,related_name='activity')
 
 	start_time=models.DateTimeField()
 	end_time=models.DateTimeField()
